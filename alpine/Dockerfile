@@ -9,4 +9,5 @@ RUN apk --update --no-cache add ca-certificates python3  openssh-client sshpass 
     apk del .build-dev && \
     rm -rf /var/cache/apk/* && \
     mkdir -p /etc/ansible 
+WORKDIR /etc/ansible
 CMD [ "ansible-playbook", "--version" ]
